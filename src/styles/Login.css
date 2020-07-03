@@ -1,0 +1,105 @@
+.login_container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 2em auto;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card_login{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login_form{
+    width: 40%;
+    padding: 3rem;
+}
+
+.login_form img{
+    width: 150px;
+}
+
+.login_form h4{
+    margin: 1em 0;
+    font-family: "Nunito Sans",sans-serif;
+    font-size: 1.25rem;
+    color: #4b4b5a;
+    font-weight: 600;
+}
+
+.login_form p{
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.login_form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 1em auto;
+}
+
+.login_form form label{
+    margin-bottom: 1em;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+
+.login_form form input{
+    display: block;
+    height: calc(1.5em + 2px);
+    padding: .5rem .75rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #4b4b5a;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e2e7f1;
+    border-radius: .3rem;
+    margin-bottom: 1em;
+}
+
+.login_form form button {
+    color: #fff;
+    background-color: #1b81e5;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .5rem .75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    border: none;
+}
+
+.login_form form button:hover{
+    background-color: #607d8b;
+}
+
+.login_form a{
+    color: #1b81e5;
+}
+
+.login_image{
+    display: inline-block;
+    width: 50%;
+}
+
+.login_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

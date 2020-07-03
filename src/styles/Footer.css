@@ -1,0 +1,27 @@
+footer{
+    background-color: #607D8B;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_logo img{
+    width: 150px;
+    margin: 1em auto;
+}
+
+.menu_footer{
+    margin: 1em auto;
+}
+
+.menu_footer ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu_footer ul li{
+    margin: 0 1em;
+}
