@@ -9,17 +9,24 @@
     background-clip: border-box;
     border: 0 solid rgba(0,0,0,.125);
     border-radius: .25rem;
+    min-height: 80vh;
+    justify-content: center;
 }
 
 .card_login{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    min-height: 80vh;
 }
 
 .login_form{
     width: 100%;
     padding: 3rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .login_form img{
@@ -44,6 +51,7 @@
     flex-direction: column;
     justify-content: left;
     margin: 1em auto;
+    width: 100%;
 }
 
 .login_form form label{
