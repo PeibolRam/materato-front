@@ -19,9 +19,21 @@ footer{
 
 .menu_footer ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu_footer ul li{
-    margin: 0 1em;
+    margin: 0.75em auto;
+}
+
+@media screen and (min-width: 768px){
+    .menu_footer ul{
+        flex-direction: row;
+    }
+
+    .menu_footer ul li{
+        margin: 0.75em 1em;
+    }
 }

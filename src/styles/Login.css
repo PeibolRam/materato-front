@@ -14,10 +14,11 @@
 .card_login{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .login_form{
-    width: 40%;
+    width: 100%;
     padding: 3rem;
 }
 
@@ -94,12 +95,43 @@
 }
 
 .login_image{
-    display: inline-block;
-    width: 50%;
+    display: none;
+    border-radius: .25rem;
 }
 
 .login_image img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: .25rem;
+}
+
+
+@media screen and (min-width: 768px){
+    .login_container{
+        max-width: 720px;
+    }
+
+    .login_form{
+        width: 40%;
+        padding: 2em;
+    }
+
+    .login_image{
+        display: block;
+        width: 50%;
+    }
+}
+
+
+@media screen and (min-width: 992px){
+    .login_container{
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .login_container{
+        max-width: 1140px;
+    }
 }
