@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { getToken } from '../utils/Auth'
+import { getToken, deleteToken } from '../utils/Auth'
 import axios from 'axios'
 
 const ApiUrl = process.env.REACT_APP_APIURL
@@ -21,10 +21,11 @@ const PrivateRoute = ({component: Component, ...rest}) => {
                 };
                 
                 let res = await axios.get(`${ApiUrl}/api/users/auth`, config)
-                console.log(res)
                 if(res.data.isAuth){
                     setIsLogin(true)
                     setLoading(false)
+                }else{
+                    deleteToken()
                 }
             }
         }

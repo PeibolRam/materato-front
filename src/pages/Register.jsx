@@ -40,7 +40,7 @@ export default function Register() {
     return (
         <>
             {successReg ? 
-            <Redirect to="/" /> : 
+            <Redirect to="/login" /> : 
             <div className="login_container">
                 <div className="card_login">
                     <div className="login_form">
