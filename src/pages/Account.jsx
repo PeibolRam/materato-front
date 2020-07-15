@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { getToken, deleteToken } from '../utils/Auth'
+import { Link, useHistory } from 'react-router-dom'
 import axios from 'axios'
 import '../styles/Account.css'
+import '../styles/Login.css'
 
 const ApiUrl = process.env.REACT_APP_APIURL
 
@@ -10,6 +12,7 @@ export default function Account() {
     const [lastname, setLastname] = useState('')
     const [email, setEmail] = useState('')
     const [accountId, setAccountId] = useState('')
+    const history = useHistory()
 
     useEffect(() => {
         async function cargarUsuario() {
@@ -34,10 +37,10 @@ export default function Account() {
         let config = {
             headers: { Authorization: `Bearer ${getToken()}` }
         };
-
-
         let res = await axios.put(`${ApiUrl}/api/users/${accountId}`, userData, config)
-        console.log(res)
+        if(res.data.success){
+            history.push("/dashboard");
+        }
     };
 
     const onSubmit = e => {
@@ -51,38 +54,46 @@ export default function Account() {
     }
 
     return (
-        <div className="mi_cuenta">
-            <h1>Mi cuenta</h1>
-            <h2>Modificación de datos</h2>
-            <form  onSubmit={onSubmit} method="post">
-                <label htmlFor="name">Nombre</label>
-                <input 
-                id="name" 
-                type="name" 
-                placeholder="Nombre"
-                value={name}
-                onChange={e => setName(e.target.value)}
-                />
-                <label htmlFor="lastname">Apellido</label>
-                <input 
-                id="lastname" 
-                type="lastname" 
-                placeholder="Apellido"
-                value={lastname}
-                onChange={e => setLastname(e.target.value)}
-                />
-                <label htmlFor="email">Email</label>
-                <input 
-                id="email" 
-                type="email" 
-                placeholder="Email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                />
+        <div className="login_container">
+            <div className="card_login">
+                <div className="login_form">
+                    <img src="/logo-batman.png" alt=""/>
+                    <h4>Mi cuenta</h4>
+                    <p>Modificación de datos</p>
+                    <form  onSubmit={onSubmit} method="post">
+                        <label htmlFor="name">Nombre</label>
+                        <input 
+                        id="name" 
+                        type="name" 
+                        placeholder="Nombre"
+                        value={name}
+                        onChange={e => setName(e.target.value)}
+                        />
+                        <label htmlFor="lastname">Apellido</label>
+                        <input 
+                        id="lastname" 
+                        type="lastname" 
+                        placeholder="Apellido"
+                        value={lastname}
+                        onChange={e => setLastname(e.target.value)}
+                        />
+                        <label htmlFor="email">Email</label>
+                        <input 
+                        id="email" 
+                        type="email" 
+                        placeholder="Email"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                        />
 
-                <button type="submit">Actualizar</button>
-            </form>
-
+                        <button type="submit">Actualizar</button>
+                    </form>
+                    <p><Link to="/pass">Modificar contraseña</Link></p>
+                </div>
+                <div className="login_image">
+                    <img src="/login-img.png" alt=""/>
+                </div>
+            </div>
         </div>
     )
 }

@@ -11,6 +11,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import Account from './pages/Account'
+import Pass from './pages/Pass'
 
 export default function Routes() {
     return (
@@ -22,6 +23,7 @@ export default function Routes() {
                 <Route exact path="/registrate" component={Register} />
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 <PrivateRoute exact path="/cuenta" component={Account} />
+                <PrivateRoute exact path="/pass" component={Pass} />
             </Switch>
         </Router>
     )

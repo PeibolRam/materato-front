@@ -16,6 +16,7 @@ export default function Register() {
 
     const registerUser = async(userData) => {
         let res = await axios.post(`${ApiUrl}/api/users/register`, userData)
+        console.log(res)
         if(res.data.success){
             setSuccessReg(true)
         }

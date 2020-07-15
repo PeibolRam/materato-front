@@ -19,9 +19,11 @@ export default function Login() {
             "password": password
         }
         loginUser(logUser)
+        
     }
 
     const loginUser = async(userData) => {
+        
         let res = await axios.post(`${ApiUrl}/api/users/login`, userData)
         console.log(res.data)
         if(res.data.loginSuccess){

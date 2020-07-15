@@ -61,7 +61,7 @@ export default function Navbar() {
                         <ul className="desk_menu">
                             <li>
                                 <Link to="/dashboard">
-                                    Cusros
+                                    Cursos
                                 </Link>
                             </li>
                             <li>
@@ -95,7 +95,7 @@ export default function Navbar() {
                             <ul className="mov_menu" id="hamburger">
                                 <li>
                                     <Link to="/dashboard">
-                                        Cusros
+                                        Cursos
                                     </Link>
                                 </li>
                                 <li>
